@@ -82,6 +82,7 @@ textarea::placeholder{
     align-items: center;
     justify-content: start;
     margin-bottom: 8px;
+    gap: 8px;
 }
 .content-text .c-text__buttons p{
     font-weight: 300;
@@ -89,7 +90,7 @@ textarea::placeholder{
 }
 
 
-.content-text .c-text__buttons div:last-child {
+.content-text .c-text__buttons .btns{
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -199,7 +200,7 @@ textarea::placeholder{
     textarea::placeholder{
         font-size: 28px;
     }
-    .content-text .c-text__buttons div {
+    .content-text .c-text__buttons .btns {
         flex-direction: row;
         
     }
