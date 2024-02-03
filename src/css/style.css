@@ -1,0 +1,250 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+}
+:root{
+    --color-text:#fbfbfb;
+}
+html,body{
+    background-color: #0a2f5d;
+    color: var(--color-text);
+}
+
+/* -------------------------------------------- */
+main{
+    padding: 20px;
+    position: relative;
+}
+
+main .notification{
+    position: fixed;
+    height: auto;
+    z-index: 100;
+    top: 15px;
+    right: 15px;
+    background-color: #f3f3f3;
+    border-radius: 8px;
+    color: #0a2f5d;
+    box-shadow: 1px 4px 10px -5px rgba(0, 0, 0, 0.75);
+}
+
+main .notification div{
+    display: inline-block;
+    font-size: 11px;
+    font-weight:400;   
+    padding: 10px 10px;
+    padding-right: 120px;
+   
+    
+}
+
+main .content-text textarea ,
+main .content-result .result textarea{
+    width: 100%;
+    color: var(--color-text);
+    resize: none;
+    border-radius: 5px;
+    padding: 10px;
+    min-height: 60vh;
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 18px;
+    line-height: 28px;
+}
+
+input,button,textarea{
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+main .content-text{
+    margin-bottom: 35px;
+}
+
+main .content-text h1{
+        font-family: "Cute Font", sans-serif;
+        font-weight: 500;
+        font-size: 6rem;
+      
+}
+
+textarea::placeholder{
+    font-size: 24px;
+    color: var(--color-text);
+}
+
+
+.content-text .c-text__buttons .alert {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-bottom: 8px;
+}
+.content-text .c-text__buttons p{
+    font-weight: 300;
+    font-size: 12px;
+}
+
+
+.content-text .c-text__buttons div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.content-text .c-text__buttons div button{
+    width: 100%;
+    padding:18px 15px;
+    border-radius: 15px;
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: 500;
+    background-color: aliceblue;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+
+    &:hover{
+        opacity: 0.7;
+        transition: opacity .3s ease-in-out;
+    }
+}
+
+.content-text .c-text__buttons div #btn-decrypt{
+    background-color: transparent;
+    color: var(--color-text);
+    background-color: #08274c;
+}
+
+/* ---- resultado---------------------------------------- */
+
+.content-result{
+    /* box-shadow: 1px 2px 25px -12px #e2e2e24c; */
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    padding: 50px 25px;
+    padding-bottom: 15px;
+}
+
+.content-result .result{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.content-result .result textarea{
+   
+}
+.content-result .result #btn-copy{
+    width: 100%;
+    border-radius: 15px;
+    padding: 18px 15px;
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: 500;
+    background-color: transparent;
+    color: var(--color-text);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    &:hover{
+        opacity: 0.7;
+        transition: opacity .3s ease-in-out;
+    }
+}
+.content-result .c-result-info{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+.content-result .c-result-info .img_any{
+    display: none;
+}
+
+.content-result .c-result-info h2{
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+.content-result .c-result-info p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 20px;
+  }
+
+
+
+  @media screen and (min-width:700px) {
+
+    main .content-text textarea {
+        font-size: 28px;
+    }
+    main .notification div{
+        font-size: 13px;
+        padding-right: 170px;
+    }
+    
+    
+    textarea::placeholder{
+        font-size: 28px;
+    }
+    .content-text .c-text__buttons div {
+        flex-direction: row;
+        
+    }
+  }
+
+  
+  @media screen and (min-width:1024px) {
+
+    main{
+        padding: 20px 60px;
+        display: grid;
+        gap: 15pX;
+        grid-template-columns: repeat(auto-fill, minmax(calc(( 100% / 3) - 15px),1fr));
+        min-height: 80vh;
+    }
+    main .content-text{
+        grid-column: 1/ 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 0;
+    }
+
+    main .content-text textarea {
+        font-size: 28px;
+    }
+    textarea::placeholder{
+        font-size: 28px;
+    }
+    .content-text > div{
+        padding-left: 50px;
+    }
+
+    .content-result{
+        grid-column: 3/4;
+    }
+
+    .content-result .c-result-info .img_any{
+        display: block;
+        width: 100%;
+    }
+    
+    .content-text .c-text__buttons div {
+        flex-direction: row;
+        
+    }
+  }

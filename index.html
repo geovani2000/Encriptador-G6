@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descriptador</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cute+Font&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/src/css/style.css">
+</head>
+<body>
+    <main>
+        
+        <article class="content-text">
+            <h1>a</h1>
+            <div id="content_textarea">
+                <textarea name="data" id="" cols="30" rows="10" placeholder="Ingrese el texto aqui"></textarea>
+            </div>
+            <div class="c-text__buttons">
+                <div class="alert">
+                    <img src="./src/assets/Vector.svg" alt="svg icons alert" srcset=""> 
+                    <p>Solo letras minúsculas y sin acentos.</p>
+                </div>
+                <div>
+                    <button id="btn-encrypt" type="button">Encriptar</button>
+                    <button id="btn-decrypt" type="button">Desencriptar</button>
+                </div>
+            </div>
+        </article>
+        <article id="content-result" class="content-result">
+            <div class="c-result-info">
+                <img class="img_any" src="./src/assets/Muñeco.svg" alt="">
+                
+                <div>
+                    <h2>Ningún mensaje fue encontrado</h2>
+                <p>ingresa el texto que desees encriptar o desencriptar.</p>
+                </div>
+            </div> 
+        </article>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="./src/js/js.js"></script>
+</body>
+</html>
