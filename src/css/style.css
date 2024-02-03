@@ -89,7 +89,7 @@ textarea::placeholder{
 }
 
 
-.content-text .c-text__buttons div {
+.content-text .c-text__buttons div:last-child {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -101,6 +101,7 @@ textarea::placeholder{
     font-size: 18px;
     cursor: pointer;
     font-weight: 500;
+    color: #020202;
     background-color: aliceblue;
     border: 2px solid rgba(255, 255, 255, 0.3);
 
@@ -136,9 +137,7 @@ textarea::placeholder{
     flex-direction: column;
     justify-content: space-between;
 }
-.content-result .result textarea{
-   
-}
+
 .content-result .result #btn-copy{
     width: 100%;
     border-radius: 15px;
